@@ -24,6 +24,7 @@ operative representation 定义，与字节住在哪一层存储无关。六个�
 bash code/build.sh
 ```
 
+一条命令产出：主图 SVG、32 个独立图标 SVG、图标总览图、展开版 SVG、PDF、PNG。
 依赖：`python3`（无第三方包）、Google Chrome（导 PDF）、
 `rsvg-convert`（导 PNG，`brew install librsvg`）。
 
@@ -50,6 +51,27 @@ Type3 字体，arXiv 会告警、IEEE PDF eXpress 会拦；Chrome 只产 Type0 �
 > logical type, while indexing, reuse, and scheduling (top) and consistency and
 > coordination (right) apply across all layers.
 
+## 给画图同学的交接物
+
+图里的图标不是下载来的素材，是脚本里手写的矢量图元（`code/icons.py`，
+32 个 24x24 symbol，全部由 rect/circle/path 构成）。**没有外部引用、没有内嵌位图、
+没有字体依赖**，所以不存在"去哪下载原始图标"的问题，直接从本仓库取即可：
+
+| 要什么 | 拿哪个 |
+| --- | --- |
+| 单个图标，丢进 Illustrator/Figma 改 | `latex/figures/icons/ic-*.svg`，每个都是独立 24x24 SVG |
+| 一眼看全 32 个图标叫什么 | `latex/figures/icons/_contact_sheet.{svg,png}` |
+| 整张图，要在设计软件里改 | `latex/figures/systems_realization_flat.svg` |
+| 整张图，要继续用脚本改 | `latex/figures/systems_realization.svg` + `code/` |
+
+**设计软件请用 `_flat.svg` 那份**：主图用 `<symbol>`/`<use>` 复用图标，
+Illustrator 与 Figma 对这两个标签的支持不一致，容易开出来图标丢失。展开版把
+37 处 `<use>` 全部内联，与主图逐像素一致（渲染 PNG 的 SHA-256 相同），
+但任何编辑器都能正确打开。
+
+图标命名与含义见 `code/export_icons.py` 里的 `CAPTION` 表；配色沿用下面的
+survey 调色板，改图标时直接复用这几个色值即可。
+
 ## 约定
 
 - **配色**取自 survey 现有插图：coral `#F8A599`、dark teal `#29697B`、
@@ -57,7 +79,8 @@ Type3 字体，arXiv 会告警、IEEE PDF eXpress 会拦；Chrome 只产 Type0 �
   pale peach `#F8D6BE`，四个表示族固定用 green `#D6E7CD`、blue `#D3DEF0`、
   lavender `#E3DAF2`、teal `#D2ECE8`。常量集中在生成脚本开头。
 - **新增图**沿用同一套骨架：`code/gen_<figure>.py` 写 SVG 到
-  `latex/figures/`，`code/build.sh` 追加一段导出。
+  `latex/figures/`，`code/build.sh` 追加一段导出。图标复用 `code/icons.py`，
+  新图标加进同一个 `SYM` 表并在 `CAPTION` 里写明含义，导出与总览图自动跟上。
 - **图内不出现论文名**，避免图随引用变化而失效。
 
 ## Source of Truth
@@ -71,4 +94,5 @@ Type3 字体，arXiv 会告警、IEEE PDF eXpress 会拦；Chrome 只产 Type0 �
 
 - survey 的 LaTeX 源若要一并托管，放 `latex/` 下与 `figures/` 同级。
 - 其余章节配图按上面的约定逐张补，公用的绘图 helper 到第二张图时
-  再抽到 `code/figkit.py`，目前只有一张不提前抽象。
+  再抽到 `code/figkit.py`，目前只有一张不提前抽象。图标库已经先抽出来了
+  （`code/icons.py`），因为它确定会被多张图复用。

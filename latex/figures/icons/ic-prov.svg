@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+<title>ic-prov — provenance</title>
+<rect x="13.5" y="3.5" width="7.5" height="7.5" rx="1.6" fill="#FFFFFF" stroke="#29697B" stroke-width="1.4"/>
+<rect x="3" y="13" width="7.5" height="7.5" rx="1.6" fill="#CBE2E6" stroke="#29697B" stroke-width="1.4"/>
+<path d="M13.5 8.5 H10 a2.5 2.5 0 0 0 -2.5 2.5 V12" fill="none" stroke="#29697B" stroke-width="1.4" stroke-dasharray="2.6 2"/>
+<path d="M5.6 11.6 L7.5 14.4 L9.4 11.6 Z" fill="#DD6E56"/>
+</svg>

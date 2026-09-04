@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+<title>ic-graph — graph nodes</title>
+<g stroke="#29697B" stroke-width="1.3"><line x1="6.5" y1="8" x2="17" y2="6.2"/><line x1="6.5" y1="8" x2="12" y2="17.2"/><line x1="17" y1="6.2" x2="12" y2="17.2"/></g>
+<circle cx="6.5" cy="8" r="3" fill="#D3DEF0" stroke="#29697B" stroke-width="1.3"/>
+<circle cx="17.2" cy="6.2" r="2.6" fill="#F8A599" stroke="#29697B" stroke-width="1.3"/>
+<circle cx="12" cy="17.2" r="2.8" fill="#CBE2E6" stroke="#29697B" stroke-width="1.3"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+<title>ic-gpu — accelerator HBM</title>
+<g stroke="#29697B" stroke-width="1.3" stroke-linecap="round">
+<line x1="8" y1="2.6" x2="8" y2="5.5"/><line x1="12" y1="2.6" x2="12" y2="5.5"/><line x1="16" y1="2.6" x2="16" y2="5.5"/>
+<line x1="8" y1="18.5" x2="8" y2="21.4"/><line x1="12" y1="18.5" x2="12" y2="21.4"/><line x1="16" y1="18.5" x2="16" y2="21.4"/></g>
+<rect x="4" y="5.5" width="16" height="13" rx="2.4" fill="#CBE2E6" stroke="#29697B" stroke-width="1.5"/>
+<rect x="7.6" y="9" width="8.8" height="6" rx="1.4" fill="#72ADAB"/>
+</svg>

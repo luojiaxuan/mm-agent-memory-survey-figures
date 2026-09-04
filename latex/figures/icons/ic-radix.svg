@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+<title>ic-radix — prefix / radix index</title>
+<g stroke="#29697B" stroke-width="1.2" fill="none">
+<path d="M6 12 H9.5 V6.5 H13"/><path d="M9.5 12 V17.5 H13"/>
+<path d="M15.5 6.5 H18 V3.5 H20"/><path d="M18 6.5 V9.5 H20"/></g>
+<circle cx="4" cy="12" r="2.4" fill="#F8A599" stroke="#29697B" stroke-width="1.2"/>
+<circle cx="14.2" cy="6.5" r="2" fill="#CBE2E6" stroke="#29697B" stroke-width="1.2"/>
+<circle cx="14.2" cy="17.5" r="2" fill="#CBE2E6" stroke="#29697B" stroke-width="1.2"/>
+<circle cx="21" cy="3.5" r="1.6" fill="#FAF4D5" stroke="#29697B" stroke-width="1.1"/>
+<circle cx="21" cy="9.5" r="1.6" fill="#FAF4D5" stroke="#29697B" stroke-width="1.1"/>
+</svg>

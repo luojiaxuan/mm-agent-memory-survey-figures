@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+<title>ic-cloud — remote / disaggregated storage</title>
+<path d="M19.35 9.04 A7.49 7.49 0 0 0 12 3 C9.11 3 6.6 4.64 5.35 7.04 A5.994 5.994 0 0 0 0.6 13 c0 3.31 2.69 6 6 6 h12.4 c2.76 0 4.4 -2.24 4.4 -5 0 -2.64 -1.45 -4.78 -4.05 -4.96 z"
+ fill="#CBE2E6" stroke="#29697B" stroke-width="1.4"/>
+<g fill="#29697B"><circle cx="8" cy="21.6" r="1.2"/><circle cx="12" cy="21.6" r="1.2"/><circle cx="16" cy="21.6" r="1.2"/></g>
+</svg>

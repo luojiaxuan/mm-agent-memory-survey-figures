@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-# note (luojiaxuan): SVG -> PDF -> PNG. The PDF must come from Chrome headless:
-# note (luojiaxuan): rsvg-convert -f pdf emits Type3 fonts, which arXiv warns on
-# note (luojiaxuan): and IEEE PDF eXpress rejects. Chrome emits Type0 subsets only.
+# note (luojiaxuan): SVG -> icons -> flat SVG -> PDF -> PNG. The PDF must come
+# note (luojiaxuan): from Chrome headless: rsvg-convert -f pdf emits Type3 fonts,
+# note (luojiaxuan): which arXiv warns on and IEEE PDF eXpress rejects. Chrome
+# note (luojiaxuan): emits Type0 subsets only.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -9,6 +10,8 @@ FIG="$ROOT/latex/figures"
 CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
 python3 "$ROOT/code/gen_systems_realization.py"
+python3 "$ROOT/code/export_icons.py"
+python3 "$ROOT/code/flatten.py"
 
 WRAP="$(mktemp -t figwrap).html"
 cat > "$WRAP" <<'HTML'
@@ -21,6 +24,8 @@ cat "$FIG/systems_realization.svg" >> "$WRAP"
 rm -f "$WRAP"
 
 rsvg-convert -w 2520 "$FIG/systems_realization.svg" -o "$FIG/systems_realization.png"
+rsvg-convert -w 1710 "$FIG/icons/_contact_sheet.svg" -o "$FIG/icons/_contact_sheet.png"
 
 echo "built:"
 ls -lh "$FIG"
+echo "icons: $(ls "$FIG/icons"/ic-*.svg | wc -l | tr -d ' ') files"
