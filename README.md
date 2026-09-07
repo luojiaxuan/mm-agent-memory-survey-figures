@@ -14,7 +14,8 @@ Survey《Seeing, Maintaining, and Learning: The Evolution of Multimodal Agent Me
 
 这张图把 §7.5.1 的核心论断可视化：逻辑记忆的类型由交给下游计算的
 operative representation 定义，与字节住在哪一层存储无关。六个区块分别对应
-逻辑记忆四大表示族、跨层 read/write 运行时（§7.5.4）、活跃模型执行、
+逻辑记忆四大表示族（§3.1–3.4 的标题用词）、跨层 read/write 编排（§7.5.4）、
+downstream computation（全文统一术语，即消费记忆的 reason/plan/act 计算）、
 物理存储层次与数据搬运（§7.5.2）、索引与复用调度控制面（§7.5.3）、
 以及贯穿各层的一致性与协调（§7.5.4 结尾）。
 
@@ -24,7 +25,7 @@ operative representation 定义，与字节住在哪一层存储无关。六个�
 bash code/build.sh
 ```
 
-一条命令产出：主图 SVG、32 个独立图标 SVG、图标总览图、展开版 SVG、PDF、PNG。
+一条命令产出：主图 SVG、33 个独立图标 SVG、图标总览图、展开版 SVG、PDF、PNG。
 依赖：`python3`（无第三方包）、Google Chrome（导 PDF）、
 `rsvg-convert`（导 PNG，`brew install librsvg`）。
 
@@ -45,8 +46,9 @@ Type3 字体，arXiv 会告警、IEEE PDF eXpress 会拦；Chrome 只产 Type0 �
 建议 caption：
 
 > Systems realization of multimodal agent memory. Logical memory (left) is defined by
-> the operative representation supplied to downstream computation. A cross-layer runtime
-> materializes it into active execution state and commits execution history back.
+> the operative representation supplied to downstream computation. Cross-layer orchestration
+> materializes it into execution state on the read path and commits execution history back
+> on the write path.
 > Physical placement across HBM, DRAM, SSD, and remote storage (bottom) is orthogonal to
 > logical type, while indexing, reuse, and scheduling (top) and consistency and
 > coordination (right) apply across all layers.
@@ -54,13 +56,13 @@ Type3 字体，arXiv 会告警、IEEE PDF eXpress 会拦；Chrome 只产 Type0 �
 ## 给画图同学的交接物
 
 图里的图标不是下载来的素材，是脚本里手写的矢量图元（`code/icons.py`，
-32 个 24x24 symbol，全部由 rect/circle/path 构成）。**没有外部引用、没有内嵌位图、
+33 个 24x24 symbol，全部由 rect/circle/path 构成）。**没有外部引用、没有内嵌位图、
 没有字体依赖**，所以不存在"去哪下载原始图标"的问题，直接从本仓库取即可：
 
 | 要什么 | 拿哪个 |
 | --- | --- |
 | 单个图标，丢进 Illustrator/Figma 改 | `latex/figures/icons/ic-*.svg`，每个都是独立 24x24 SVG |
-| 一眼看全 32 个图标叫什么 | `latex/figures/icons/_contact_sheet.{svg,png}` |
+| 一眼看全 33 个图标叫什么 | `latex/figures/icons/_contact_sheet.{svg,png}` |
 | 整张图，要在设计软件里改 | `latex/figures/systems_realization_flat.svg` |
 | 整张图，要继续用脚本改 | `latex/figures/systems_realization.svg` + `code/` |
 

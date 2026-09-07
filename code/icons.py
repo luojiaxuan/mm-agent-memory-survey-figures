@@ -166,5 +166,8 @@ SYM["ic-share"] = '''
 <circle cx="8.6" cy="12" r="4.8" fill="#CBE2E6" stroke="#29697B" stroke-width="1.4"/>
 <circle cx="15.4" cy="12" r="4.8" fill="#FFFFFF" fill-opacity="0.0" stroke="#29697B" stroke-width="1.4"/>
 <line x1="12" y1="4.4" x2="12" y2="19.6" stroke="#DD6E56" stroke-width="1.6" stroke-dasharray="2.6 2.2"/>'''
-
-
+SYM["ic-lifetime"] = '''
+<path d="M6.5 3.5 H17.5 V6.2 L12.8 11.2 V12.8 L17.5 17.8 V20.5 H6.5 V17.8 L11.2 12.8 V11.2 L6.5 6.2 Z" fill="#FFFFFF" stroke="#29697B" stroke-width="1.4" stroke-linejoin="round"/>
+<path d="M8.6 6.2 H15.4 L12 9.8 Z" fill="#F8A599"/>
+<path d="M9.4 18.8 H14.6 L12 16.2 Z" fill="#CBE2E6"/>
+<path d="M5.2 3.5 H18.8 M5.2 20.5 H18.8" stroke="#29697B" stroke-width="1.8" stroke-linecap="round"/>'''

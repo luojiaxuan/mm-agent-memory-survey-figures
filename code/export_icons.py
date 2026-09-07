@@ -26,7 +26,7 @@ CAPTION = {
     "ic-ctx": "context window", "ic-feat": "multimodal features",
     "ic-identity": "identity", "ic-version": "version", "ic-prov": "provenance",
     "ic-dep": "dependency", "ic-inval": "invalidation", "ic-del": "deletion",
-    "ic-share": "sharing & isolation",
+    "ic-share": "sharing & isolation", "ic-lifetime": "lifetime",
 }
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]

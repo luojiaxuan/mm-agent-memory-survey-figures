@@ -82,7 +82,7 @@ add(f'<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/199
     f'viewBox="0 0 {W} {H}" width="{W}" height="{H}" '
     f'font-family="Helvetica Neue, Helvetica, Arial, sans-serif">')
 add('<defs>')
-for mid, col, size in (("arrT", TEAL, 10), ("arrTs", TEAL, 8), ("arrC", CORAL_TX, 10), ("arrM", MTEAL, 8)):
+for mid, col, size in (("arrT", TEAL, 10), ("arrTs", TEAL, 8), ("arrC", CORAL_TX, 10), ("arrM", MTEAL, 8), ("arrP", "#C98B5E", 8)):
     add(f'<marker id="{mid}" viewBox="0 0 10 10" refX="9.2" refY="5" markerWidth="{size}" '
         f'markerHeight="{size}" markerUnits="userSpaceOnUse" orient="auto">'
         f'<path d="M0.5 0.8 L9.6 5 L0.5 9.2 L2.4 5 Z" fill="{col}"/></marker>')
@@ -108,7 +108,7 @@ txt(40, 130, "& Scheduling", size=17, fill=TEAL, weight="bold")
 
 CHIPS = [(["ic-search", "ic-graph"], "Semantic · Temporal ·", "spatial / entity paths"),
          (["ic-radix"], "Prefix / Radix Index", "reusable execution state"),
-         (["ic-check"], "Reuse Validation", "identity · order · position"),
+         (["ic-check"], "Reuse Validation", "interface · order · position"),
          (["ic-queue"], "Admission & Retention", "what enters · what persists"),
          (["ic-clock"], "Memory-Aware Scheduling", "cost-aware ordering")]
 for i, (icons, t1, t2) in enumerate(CHIPS):
@@ -121,7 +121,7 @@ for i, (icons, t1, t2) in enumerate(CHIPS):
     txt(tx, 99, t1, size=15, fill=TEAL, weight="bold")
     txt(tx, 116, t2, size=13.5, fill=MUTED)
 
-for cx in (235, 826, 1329):
+for cx in (235, 816, 1337):
     line(cx, 148, cx, 165, stroke=MTEAL, sw=1.3, dash="4 3", marker="arrM")
 line(462, 148, 462, 590, stroke=MTEAL, sw=1.3, dash="4 4", marker="arrM")
 
@@ -132,7 +132,7 @@ txt(40, 216, "representation supplied to downstream computation", size=14, fill=
 
 CARDS = [("Source & Modality-Specific", "image · video · audio · RGB-D", GREEN, GREEN_LN,
           ["ic-image", "ic-video", "ic-audio", "ic-rgbd"]),
-         ("Textual & Structured", "text record · event · table · graph", BLUE, BLUE_LN,
+         ("Cross-Represented Explicit", "text record · summary · graph", BLUE, BLUE_LN,
           ["ic-text", "ic-event", "ic-table", "ic-graph"]),
          ("Latent & Parametric", "tokens · recurrent state · adapter", LAV, LAV_LN,
           ["ic-tokens", "ic-recur", "ic-kv", "ic-adapter"]),
@@ -149,9 +149,9 @@ for i, (t1, t2, fill, ln, icons) in enumerate(CARDS):
         use(ic, sx + j * 32, y + 23, 24)
 
 # note (luojiaxuan): centre panel: cross-layer read and write paths
-rect(492, 168, 668, 380, rx=16, fill="#FEF8F6", stroke=CORAL_LN, sw=1.6, dash="7 4")
-txt(826, 202, "Cross-Layer Memory Runtime", size=25, fill=CORAL_TX, weight="bold", anchor="middle")
-txt(826, 221, "materialization on the read path · commit on the write path",
+rect(492, 168, 648, 380, rx=16, fill="#FEF8F6", stroke=CORAL_LN, sw=1.6, dash="7 4")
+txt(816, 202, "Cross-Layer Memory Orchestration", size=25, fill=CORAL_TX, weight="bold", anchor="middle")
+txt(816, 221, "materialization on the read path · commit on the write path",
     size=14, fill=MUTED, anchor="middle", style="italic")
 
 txt(512, 246, "READ   ▸   logical memory into execution", size=15, fill=CORAL_TX, weight="bold", ls=0.6)
@@ -163,15 +163,16 @@ pill(925, 252, 175, 40, None, fill=PCYAN, tcol=TEAL, stroke=PCYAN_LN, sw=1.3, si
      lines=["Active Execution", "State"])
 add(f'<path d="M448 308 H466 Q478 308 478 296 V284 Q478 272 490 272 H508" fill="none" '
     f'stroke="{TEAL}" stroke-width="1.8" stroke-linecap="round" marker-end="url(#arrT)"/>')
-line(1104, 272, 1178, 272, sw=1.8, marker="arrT")
+line(1104, 272, 1158, 272, sw=1.8, marker="arrT")
 
-READ_EX = [("text", "→ into context"), ("image", "→ into VLM input"),
-           ("feature", "→ model interface"), ("stored / rebuilt", "→ into KV state")]
+txt(512, 306, "how each form materializes", size=12.5, fill=MUTED, style="italic")
+READ_EX = [("text record", "→ into context"), ("image", "→ into VLM input"),
+           ("media feature", "→ model interface"), ("stored / rebuilt", "→ into KV state")]
 for i, (a, b) in enumerate(READ_EX):
     x = 512 + i * 150
-    rect(x, 304, 138, 46, rx=9, fill="#FFFFFF", stroke=CORAL_LN, sw=1, dash="3.5 3")
-    txt(x + 69, 324, a, size=14, fill=TEAL, weight="bold", anchor="middle")
-    txt(x + 69, 341, b, size=13.5, fill=MUTED, anchor="middle")
+    rect(x, 312, 138, 42, rx=9, fill="#FFFFFF", stroke=CORAL_LN, sw=1, dash="3.5 3")
+    txt(x + 69, 329, a, size=14, fill=TEAL, weight="bold", anchor="middle")
+    txt(x + 69, 346, b, size=13.5, fill=MUTED, anchor="middle")
 
 line(512, 368, 1100, 368, stroke=CORAL_LN, sw=1, dash="3 4")
 
@@ -184,62 +185,70 @@ pill(950, 402, 150, 40, None, fill=PCYAN, tcol=TEAL, stroke=PCYAN_LN, sw=1.3, si
      lines=["Execution", "History"])
 add(f'<path d="M508 422 H490 Q478 422 478 410 V398 Q478 386 466 386 H450" fill="none" '
     f'stroke="{TEAL}" stroke-width="1.8" stroke-linecap="round" marker-end="url(#arrT)"/>')
-line(1178, 422, 1104, 422, sw=1.8, marker="arrT")
+line(1158, 422, 1104, 422, sw=1.8, marker="arrT")
 
-WRITE_EX = [("expired", "context"), ("completed", "trajectory"),
-            ("reasoning-derived", "state"), ("persistent record", "or latent memory")]
-for i, (a, b) in enumerate(WRITE_EX):
-    x = 512 + i * 150
-    rect(x, 454, 138, 46, rx=9, fill="#FFFFFF", stroke=CORAL_LN, sw=1, dash="3.5 3")
-    txt(x + 69, 474, a, size=14, fill=TEAL, weight="bold", anchor="middle")
-    txt(x + 69, 491, b, size=13.5, fill=MUTED, anchor="middle")
+txt(512, 456, "what gets committed, and into what", size=12.5, fill=MUTED, style="italic")
+WRITE_SRC = [("expired", "context"), ("completed", "trajectory"), ("reasoning-", "derived state")]
+for i, (a, b) in enumerate(WRITE_SRC):
+    x = 512 + i * 132
+    rect(x, 462, 126, 42, rx=9, fill="#FFFFFF", stroke=CORAL_LN, sw=1, dash="3.5 3")
+    txt(x + 63, 479, a, size=14, fill=TEAL, weight="bold", anchor="middle")
+    txt(x + 63, 496, b, size=13.5, fill=MUTED, anchor="middle")
+line(906, 483, 924, 483, sw=1.6, marker="arrT")
+rect(926, 462, 174, 42, rx=9, fill=PCYAN, stroke=PCYAN_LN, sw=1.2)
+txt(1013, 479, "persistent record", size=14, fill=TEAL, weight="bold", anchor="middle")
+txt(1013, 496, "or latent memory", size=13.5, fill=TEAL, anchor="middle")
 
-txt(826, 528, "a residency change moves bytes without changing the logical memory state",
+txt(816, 528, "a residency change moves bytes without changing the logical memory state",
     size=14, fill=MUTED, anchor="middle", style="italic")
 
 # note (luojiaxuan): right panel: active model execution
-rect(1182, 168, 294, 380, rx=14, fill="#EAF5F7", stroke=PCYAN_LN, sw=1.3, dash="6 4")
-txt(1329, 200, "Active Model Execution", size=24, fill=TEAL, weight="bold", anchor="middle")
-INP = [("ic-ctx", "Context"), ("ic-feat", "Multimodal Features"),
-       ("ic-tokens", "Latent Tokens"), ("ic-kv", "KV / Recurrent State")]
-for i, (ic, a) in enumerate(INP):
-    y = 214 + i * 38
-    rect(1196, y, 266, 32, rx=9, fill="#FFFFFF", stroke=PCYAN_LN, sw=1, dash="4 3")
-    use(ic, 1206, y + 6, 20)
-    txt(1234, y + 22, a, size=16, fill=TEAL, weight="bold")
-line(1329, 360, 1329, 374, sw=1.7, marker="arrT")
-rect(1298, 376, 62, 62, rx=15, fill="#FFFFFF", stroke=TEAL, sw=1.7)
-use("ic-agent", 1308, 386, 42)
+rect(1162, 168, 350, 380, rx=14, fill="#EAF5F7", stroke=PCYAN_LN, sw=1.3, dash="6 4")
+txt(1337, 200, "Downstream Computation", size=24, fill=TEAL, weight="bold", anchor="middle")
+txt(1337, 219, "materialized execution state consumed by the current request",
+    size=12.5, fill=MUTED, anchor="middle", style="italic")
+INP = [("ic-ctx", "Context", "text · image tokens"),
+       ("ic-feat", "Multimodal Features", "bound to interface"),
+       ("ic-tokens", "Latent Tokens", "compressed memory"),
+       ("ic-kv", "KV / Recurrent State", "stored or rebuilt")]
+for i, (ic, a, b) in enumerate(INP):
+    y = 228 + i * 38
+    rect(1176, y, 322, 32, rx=9, fill="#FFFFFF", stroke=PCYAN_LN, sw=1, dash="4 3")
+    use(ic, 1186, y + 6, 20)
+    txt(1214, y + 22, a, size=15, fill=TEAL, weight="bold")
+    txt(1488, y + 21, b, size=12, fill=MUTED, anchor="end")
+line(1337, 374, 1337, 388, sw=1.7, marker="arrT")
+rect(1306, 390, 62, 62, rx=15, fill="#FFFFFF", stroke=TEAL, sw=1.7)
+use("ic-agent", 1316, 400, 42)
+rect(1384, 409, 114, 24, rx=12, fill=LAV, stroke=LAV_LN, sw=1.1, dash="4 3")
+txt(1441, 425, "+ adapter weights", size=12, fill=TEAL, anchor="middle")
+line(1382, 421, 1372, 421, sw=1.4, marker="arrT")
 for i, lab in enumerate(("Reason", "Plan", "Act")):
-    x = 1196 + i * 95
-    pill(x, 446, 76, 30, lab, size=16)
+    x = 1176 + i * 114
+    pill(x, 460, 94, 30, lab, size=16)
     if i < 2:
-        line(x + 78, 461, x + 93, 461, sw=1.6, marker="arrT")
-rect(1196, 484, 266, 58, rx=10, fill="#FFFFFF", stroke=CORAL_LN, sw=1.1, dash="4 3")
-for i, sline in enumerate(["Request-local state is an execution",
-                           "artifact; only state retained and",
-                           "reused later becomes agent memory."]):
-    txt(1329, 502 + i * 16, sline, size=13.5, fill=MUTED, anchor="middle")
-
-rect(1484, 168, 28, 380, rx=9, fill=PCYAN, stroke=PCYAN_LN, sw=1.2)
-add(f'<text x="1498" y="358" font-size="17" fill="{TEAL}" font-weight="bold" text-anchor="middle" '
-    f'transform="rotate(-90 1498 358)">Downstream Computation</text>')
+        line(x + 96, 475, x + 112, 475, sw=1.6, marker="arrT")
+rect(1176, 498, 322, 48, rx=10, fill="#FFFFFF", stroke=CORAL_LN, sw=1.1, dash="4 3")
+for i, sline in enumerate(["Request-local state is an execution artifact;",
+                           "only state deliberately retained and reused",
+                           "across later steps becomes agent memory."]):
+    txt(1337, 514 + i * 14, sline, size=12.5, fill=MUTED, anchor="middle")
 
 # note (luojiaxuan): connectors from the three panels down to the tiers
-for x, lab in ((200, "records & replicas"), (826, "byte movement"), (1329, "resident state")):
+for x, lab in ((200, "records & replicas"), (816, "byte movement"), (1337, "resident state")):
     line(x, 552, x, 592, stroke=MTEAL, sw=1.4, dash="5 3", marker="arrM", mstart="arrM")
     txt(x + 10, 578, lab, size=14, fill=MTEAL, style="italic")
 
 # note (luojiaxuan): bottom band: physical memory hierarchy
 rect(L, 596, CR - L, 172, rx=14, fill="#F7FBFC", stroke=PCYAN_LN, sw=1.3, dash="6 4")
 txt(40, 628, "Physical Memory Hierarchy", size=24, fill=TEAL, weight="bold")
-txt(392, 628, "physical placement is orthogonal to logical representation — the same logical memory "
-              "may be replicated across tiers", size=14, fill=MUTED, style="italic")
+txt(392, 628, "placement is orthogonal to logical type; multimodal state is larger and more varied: "
+              "encoder outputs, video / audio KV, diffusion state", size=14, fill=MUTED, style="italic")
 
-TIERS = [("ic-gpu", "Accelerator", "HBM", "active KV · working set"),
-         ("ic-ram", "Host", "DRAM", "staged context · pools"),
+TIERS = [("ic-gpu", "Accelerator", "HBM", "active KV · encoder outputs"),
+         ("ic-ram", "Host", "DRAM", "staged context · KV pool"),
          ("ic-ssd", "Local", "SSD", "session state · media cache"),
-         ("ic-cloud", "Remote / Disaggregated", "Storage", "shared pool · cold archive")]
+         ("ic-cloud", "Remote / Disaggregated", "Storage", "shared pool · media archive")]
 for i, (ic, t1, t2, s1) in enumerate(TIERS):
     x = 40 + i * 397
     rect(x, 634, 265, 92, rx=12, fill=PCYAN, stroke=TEAL, sw=1.4)
@@ -265,20 +274,31 @@ txt(1496, 755, "cost = bytes moved × effective bandwidth, overlapped with compu
 # note (luojiaxuan): right strip: consistency and coordination
 rect(PX0, 56, PXW, 712, rx=14, fill=PPEACH, stroke=PPEACH_LN, sw=1.3, dash="6 4")
 cxp = PX0 + PXW / 2
-txt(cxp, 86, "Consistency &", size=15, fill=TEAL, weight="bold", anchor="middle")
-txt(cxp, 104, "Coordination", size=15, fill=TEAL, weight="bold", anchor="middle")
-ITEMS = [("ic-identity", "Identity", "stable unit id"), ("ic-version", "Version", "what changed"),
-         ("ic-prov", "Provenance", "back to source"), ("ic-dep", "Dependency", "what derives"),
-         ("ic-inval", "Invalidation", "what is stale"), ("ic-del", "Deletion", "what retires"),
-         ("ic-share", "Sharing &", "Isolation")]
-for i, (ic, a, b) in enumerate(ITEMS):
-    top = 122 + i * 90
-    use(ic, cxp - 15, top + 4, 30)
-    txt(cxp, top + 52, a, size=15, fill=TEAL, weight="bold", anchor="middle")
-    if a.endswith("&"):
-        txt(cxp, top + 69, b, size=15, fill=TEAL, weight="bold", anchor="middle")
+txt(cxp, 84, "Consistency &", size=15, fill=TEAL, weight="bold", anchor="middle")
+txt(cxp, 102, "Coordination", size=15, fill=TEAL, weight="bold", anchor="middle")
+
+def strip_item(top, ic, a, b, sub_bold=False):
+    use(ic, cxp - 13, top, 26)
+    txt(cxp, top + 40, a, size=14, fill=TEAL, weight="bold", anchor="middle")
+    if sub_bold:
+        txt(cxp, top + 54, b, size=14, fill=TEAL, weight="bold", anchor="middle")
     else:
-        txt(cxp, top + 68, b, size=13.5, fill="#7A5B43", anchor="middle")
+        txt(cxp, top + 53, b, size=12.5, fill="#7A5B43", anchor="middle")
+
+txt(cxp, 124, "metadata kept", size=11.5, fill="#9A6A48", anchor="middle", style="italic")
+txt(cxp, 137, "across layers", size=11.5, fill="#9A6A48", anchor="middle", style="italic")
+KEEP = [("ic-identity", "Identity", "stable unit id"), ("ic-version", "Version", "what changed"),
+        ("ic-prov", "Provenance", "back to source"), ("ic-lifetime", "Lifetime", "how long valid"),
+        ("ic-dep", "Dependency", "what derives")]
+for i, (ic, a, b) in enumerate(KEEP):
+    strip_item(146 + i * 66, ic, a, b)
+line(cxp, 480, cxp, 496, stroke="#C98B5E", sw=1.6, marker="arrP")
+txt(cxp, 514, "decisions it", size=11.5, fill="#9A6A48", anchor="middle", style="italic")
+txt(cxp, 527, "enables", size=11.5, fill="#9A6A48", anchor="middle", style="italic")
+DECIDE = [("ic-inval", "Invalidation", "after update"), ("ic-del", "Deletion", "retire derived"),
+          ("ic-share", "Sharing &", "Isolation")]
+for i, (ic, a, b) in enumerate(DECIDE):
+    strip_item(536 + i * 72, ic, a, b, sub_bold=a.endswith("&"))
 for y in (100, 260, 430, 690):
     line(PX0 - 3, y, PX0 - 18, y, stroke=PPEACH_LN, sw=1.4, dash="4 3", marker="arrM")
 

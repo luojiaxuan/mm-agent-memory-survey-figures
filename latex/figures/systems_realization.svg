@@ -4,6 +4,7 @@
 <marker id="arrTs" viewBox="0 0 10 10" refX="9.2" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path d="M0.5 0.8 L9.6 5 L0.5 9.2 L2.4 5 Z" fill="#29697B"/></marker>
 <marker id="arrC" viewBox="0 0 10 10" refX="9.2" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto"><path d="M0.5 0.8 L9.6 5 L0.5 9.2 L2.4 5 Z" fill="#DD6E56"/></marker>
 <marker id="arrM" viewBox="0 0 10 10" refX="9.2" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path d="M0.5 0.8 L9.6 5 L0.5 9.2 L2.4 5 Z" fill="#72ADAB"/></marker>
+<marker id="arrP" viewBox="0 0 10 10" refX="9.2" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path d="M0.5 0.8 L9.6 5 L0.5 9.2 L2.4 5 Z" fill="#C98B5E"/></marker>
 <symbol id="ic-image" viewBox="0 0 24 24" overflow="visible">
 <rect x="2.5" y="4.5" width="19" height="15" rx="3" fill="#CBE2E6" stroke="#29697B" stroke-width="1.4"/>
 <circle cx="8" cy="9.5" r="2" fill="#F0CE72"/>
@@ -162,6 +163,11 @@
 <circle cx="8.6" cy="12" r="4.8" fill="#CBE2E6" stroke="#29697B" stroke-width="1.4"/>
 <circle cx="15.4" cy="12" r="4.8" fill="#FFFFFF" fill-opacity="0.0" stroke="#29697B" stroke-width="1.4"/>
 <line x1="12" y1="4.4" x2="12" y2="19.6" stroke="#DD6E56" stroke-width="1.6" stroke-dasharray="2.6 2.2"/></symbol>
+<symbol id="ic-lifetime" viewBox="0 0 24 24" overflow="visible">
+<path d="M6.5 3.5 H17.5 V6.2 L12.8 11.2 V12.8 L17.5 17.8 V20.5 H6.5 V17.8 L11.2 12.8 V11.2 L6.5 6.2 Z" fill="#FFFFFF" stroke="#29697B" stroke-width="1.4" stroke-linejoin="round"/>
+<path d="M8.6 6.2 H15.4 L12 9.8 Z" fill="#F8A599"/>
+<path d="M9.4 18.8 H14.6 L12 16.2 Z" fill="#CBE2E6"/>
+<path d="M5.2 3.5 H18.8 M5.2 20.5 H18.8" stroke="#29697B" stroke-width="1.8" stroke-linecap="round"/></symbol>
 </defs>
 <rect x="0" y="0" width="1680" height="800" rx="0" fill="#FFFFFF"/>
 <rect x="24" y="14" width="128" height="26" rx="13.0" fill="#F8A599"/>
@@ -185,7 +191,7 @@
 <rect x="716" y="72" width="255" height="58" rx="11" fill="#FFFFFF" stroke="#E0CE8E" stroke-width="1.1" stroke-dasharray="4 3"/>
 <use href="#ic-check" xlink:href="#ic-check" x="729" y="87" width="27" height="27"/>
 <text x="766" y="99" font-size="15" fill="#29697B" font-weight="bold" text-anchor="start">Reuse Validation</text>
-<text x="766" y="116" font-size="13.5" fill="#5D6B70" font-weight="normal" text-anchor="start">identity · order · position</text>
+<text x="766" y="116" font-size="13.5" fill="#5D6B70" font-weight="normal" text-anchor="start">interface · order · position</text>
 <rect x="981" y="72" width="255" height="58" rx="11" fill="#FFFFFF" stroke="#E0CE8E" stroke-width="1.1" stroke-dasharray="4 3"/>
 <use href="#ic-queue" xlink:href="#ic-queue" x="994" y="87" width="27" height="27"/>
 <text x="1031" y="99" font-size="15" fill="#29697B" font-weight="bold" text-anchor="start">Admission &amp; Retention</text>
@@ -195,8 +201,8 @@
 <text x="1296" y="99" font-size="15" fill="#29697B" font-weight="bold" text-anchor="start">Memory-Aware Scheduling</text>
 <text x="1296" y="116" font-size="13.5" fill="#5D6B70" font-weight="normal" text-anchor="start">cost-aware ordering</text>
 <path d="M235 148 L235 165" fill="none" stroke="#72ADAB" stroke-width="1.3" stroke-linecap="round" stroke-dasharray="4 3" marker-end="url(#arrM)"/>
-<path d="M826 148 L826 165" fill="none" stroke="#72ADAB" stroke-width="1.3" stroke-linecap="round" stroke-dasharray="4 3" marker-end="url(#arrM)"/>
-<path d="M1329 148 L1329 165" fill="none" stroke="#72ADAB" stroke-width="1.3" stroke-linecap="round" stroke-dasharray="4 3" marker-end="url(#arrM)"/>
+<path d="M816 148 L816 165" fill="none" stroke="#72ADAB" stroke-width="1.3" stroke-linecap="round" stroke-dasharray="4 3" marker-end="url(#arrM)"/>
+<path d="M1337 148 L1337 165" fill="none" stroke="#72ADAB" stroke-width="1.3" stroke-linecap="round" stroke-dasharray="4 3" marker-end="url(#arrM)"/>
 <path d="M462 148 L462 590" fill="none" stroke="#72ADAB" stroke-width="1.3" stroke-linecap="round" stroke-dasharray="4 4" marker-end="url(#arrM)"/>
 <rect x="24" y="168" width="422" height="380" rx="14" fill="#FBFDFE" stroke="#B7CFD6" stroke-width="1.3" stroke-dasharray="6 4"/>
 <text x="40" y="198" font-size="25" fill="#29697B" font-weight="bold" text-anchor="start">Logical Memory</text>
@@ -209,8 +215,8 @@
 <use href="#ic-audio" xlink:href="#ic-audio" x="362" y="247" width="24" height="24"/>
 <use href="#ic-rgbd" xlink:href="#ic-rgbd" x="394" y="247" width="24" height="24"/>
 <rect x="38" y="305" width="394" height="71" rx="11" fill="#D3DEF0" stroke="#A9BBDD" stroke-width="1.2" stroke-dasharray="5 3"/>
-<text x="52" y="335" font-size="17" fill="#29697B" font-weight="bold" text-anchor="start">Textual &amp; Structured</text>
-<text x="52" y="356" font-size="14" fill="#46545A" font-weight="normal" text-anchor="start">text record · event · table · graph</text>
+<text x="52" y="335" font-size="17" fill="#29697B" font-weight="bold" text-anchor="start">Cross-Represented Explicit</text>
+<text x="52" y="356" font-size="14" fill="#46545A" font-weight="normal" text-anchor="start">text record · summary · graph</text>
 <use href="#ic-text" xlink:href="#ic-text" x="298" y="328" width="24" height="24"/>
 <use href="#ic-event" xlink:href="#ic-event" x="330" y="328" width="24" height="24"/>
 <use href="#ic-table" xlink:href="#ic-table" x="362" y="328" width="24" height="24"/>
@@ -228,9 +234,9 @@
 <use href="#ic-text" xlink:href="#ic-text" x="330" y="490" width="24" height="24"/>
 <use href="#ic-chain" xlink:href="#ic-chain" x="362" y="490" width="24" height="24"/>
 <use href="#ic-image" xlink:href="#ic-image" x="394" y="490" width="24" height="24"/>
-<rect x="492" y="168" width="668" height="380" rx="16" fill="#FEF8F6" stroke="#F09A87" stroke-width="1.6" stroke-dasharray="7 4"/>
-<text x="826" y="202" font-size="25" fill="#DD6E56" font-weight="bold" text-anchor="middle">Cross-Layer Memory Runtime</text>
-<text x="826" y="221" font-size="14" fill="#5D6B70" font-weight="normal" text-anchor="middle" font-style="italic">materialization on the read path · commit on the write path</text>
+<rect x="492" y="168" width="648" height="380" rx="16" fill="#FEF8F6" stroke="#F09A87" stroke-width="1.6" stroke-dasharray="7 4"/>
+<text x="816" y="202" font-size="25" fill="#DD6E56" font-weight="bold" text-anchor="middle">Cross-Layer Memory Orchestration</text>
+<text x="816" y="221" font-size="14" fill="#5D6B70" font-weight="normal" text-anchor="middle" font-style="italic">materialization on the read path · commit on the write path</text>
 <text x="512" y="246" font-size="15" fill="#DD6E56" font-weight="bold" text-anchor="start" letter-spacing="0.6">READ   ▸   logical memory into execution</text>
 <rect x="512" y="252" width="150" height="40" rx="20.0" fill="#F8A599"/>
 <text x="587.0" y="278.12" font-size="17" fill="#FFFFFF" font-weight="bold" text-anchor="middle">Index &amp; Select</text>
@@ -242,19 +248,20 @@
 <text x="1012.5" y="268.0" font-size="16" fill="#29697B" font-weight="bold" text-anchor="middle">Active Execution</text>
 <text x="1012.5" y="284.0" font-size="16" fill="#29697B" font-weight="bold" text-anchor="middle">State</text>
 <path d="M448 308 H466 Q478 308 478 296 V284 Q478 272 490 272 H508" fill="none" stroke="#29697B" stroke-width="1.8" stroke-linecap="round" marker-end="url(#arrT)"/>
-<path d="M1104 272 L1178 272" fill="none" stroke="#29697B" stroke-width="1.8" stroke-linecap="round" marker-end="url(#arrT)"/>
-<rect x="512" y="304" width="138" height="46" rx="9" fill="#FFFFFF" stroke="#F09A87" stroke-width="1" stroke-dasharray="3.5 3"/>
-<text x="581" y="324" font-size="14" fill="#29697B" font-weight="bold" text-anchor="middle">text</text>
-<text x="581" y="341" font-size="13.5" fill="#5D6B70" font-weight="normal" text-anchor="middle">→ into context</text>
-<rect x="662" y="304" width="138" height="46" rx="9" fill="#FFFFFF" stroke="#F09A87" stroke-width="1" stroke-dasharray="3.5 3"/>
-<text x="731" y="324" font-size="14" fill="#29697B" font-weight="bold" text-anchor="middle">image</text>
-<text x="731" y="341" font-size="13.5" fill="#5D6B70" font-weight="normal" text-anchor="middle">→ into VLM input</text>
-<rect x="812" y="304" width="138" height="46" rx="9" fill="#FFFFFF" stroke="#F09A87" stroke-width="1" stroke-dasharray="3.5 3"/>
-<text x="881" y="324" font-size="14" fill="#29697B" font-weight="bold" text-anchor="middle">feature</text>
-<text x="881" y="341" font-size="13.5" fill="#5D6B70" font-weight="normal" text-anchor="middle">→ model interface</text>
-<rect x="962" y="304" width="138" height="46" rx="9" fill="#FFFFFF" stroke="#F09A87" stroke-width="1" stroke-dasharray="3.5 3"/>
-<text x="1031" y="324" font-size="14" fill="#29697B" font-weight="bold" text-anchor="middle">stored / rebuilt</text>
-<text x="1031" y="341" font-size="13.5" fill="#5D6B70" font-weight="normal" text-anchor="middle">→ into KV state</text>
+<path d="M1104 272 L1158 272" fill="none" stroke="#29697B" stroke-width="1.8" stroke-linecap="round" marker-end="url(#arrT)"/>
+<text x="512" y="306" font-size="12.5" fill="#5D6B70" font-weight="normal" text-anchor="start" font-style="italic">how each form materializes</text>
+<rect x="512" y="312" width="138" height="42" rx="9" fill="#FFFFFF" stroke="#F09A87" stroke-width="1" stroke-dasharray="3.5 3"/>
+<text x="581" y="329" font-size="14" fill="#29697B" font-weight="bold" text-anchor="middle">text record</text>
+<text x="581" y="346" font-size="13.5" fill="#5D6B70" font-weight="normal" text-anchor="middle">→ into context</text>
+<rect x="662" y="312" width="138" height="42" rx="9" fill="#FFFFFF" stroke="#F09A87" stroke-width="1" stroke-dasharray="3.5 3"/>
+<text x="731" y="329" font-size="14" fill="#29697B" font-weight="bold" text-anchor="middle">image</text>
+<text x="731" y="346" font-size="13.5" fill="#5D6B70" font-weight="normal" text-anchor="middle">→ into VLM input</text>
+<rect x="812" y="312" width="138" height="42" rx="9" fill="#FFFFFF" stroke="#F09A87" stroke-width="1" stroke-dasharray="3.5 3"/>
+<text x="881" y="329" font-size="14" fill="#29697B" font-weight="bold" text-anchor="middle">media feature</text>
+<text x="881" y="346" font-size="13.5" fill="#5D6B70" font-weight="normal" text-anchor="middle">→ model interface</text>
+<rect x="962" y="312" width="138" height="42" rx="9" fill="#FFFFFF" stroke="#F09A87" stroke-width="1" stroke-dasharray="3.5 3"/>
+<text x="1031" y="329" font-size="14" fill="#29697B" font-weight="bold" text-anchor="middle">stored / rebuilt</text>
+<text x="1031" y="346" font-size="13.5" fill="#5D6B70" font-weight="normal" text-anchor="middle">→ into KV state</text>
 <path d="M512 368 L1100 368" fill="none" stroke="#F09A87" stroke-width="1" stroke-linecap="round" stroke-dasharray="3 4"/>
 <text x="512" y="396" font-size="15" fill="#DD6E56" font-weight="bold" text-anchor="start" letter-spacing="0.6">WRITE   ◂   execution into logical memory</text>
 <rect x="512" y="402" width="175" height="40" rx="20.0" fill="#F8A599"/>
@@ -269,70 +276,78 @@
 <text x="1025.0" y="418.0" font-size="16" fill="#29697B" font-weight="bold" text-anchor="middle">Execution</text>
 <text x="1025.0" y="434.0" font-size="16" fill="#29697B" font-weight="bold" text-anchor="middle">History</text>
 <path d="M508 422 H490 Q478 422 478 410 V398 Q478 386 466 386 H450" fill="none" stroke="#29697B" stroke-width="1.8" stroke-linecap="round" marker-end="url(#arrT)"/>
-<path d="M1178 422 L1104 422" fill="none" stroke="#29697B" stroke-width="1.8" stroke-linecap="round" marker-end="url(#arrT)"/>
-<rect x="512" y="454" width="138" height="46" rx="9" fill="#FFFFFF" stroke="#F09A87" stroke-width="1" stroke-dasharray="3.5 3"/>
-<text x="581" y="474" font-size="14" fill="#29697B" font-weight="bold" text-anchor="middle">expired</text>
-<text x="581" y="491" font-size="13.5" fill="#5D6B70" font-weight="normal" text-anchor="middle">context</text>
-<rect x="662" y="454" width="138" height="46" rx="9" fill="#FFFFFF" stroke="#F09A87" stroke-width="1" stroke-dasharray="3.5 3"/>
-<text x="731" y="474" font-size="14" fill="#29697B" font-weight="bold" text-anchor="middle">completed</text>
-<text x="731" y="491" font-size="13.5" fill="#5D6B70" font-weight="normal" text-anchor="middle">trajectory</text>
-<rect x="812" y="454" width="138" height="46" rx="9" fill="#FFFFFF" stroke="#F09A87" stroke-width="1" stroke-dasharray="3.5 3"/>
-<text x="881" y="474" font-size="14" fill="#29697B" font-weight="bold" text-anchor="middle">reasoning-derived</text>
-<text x="881" y="491" font-size="13.5" fill="#5D6B70" font-weight="normal" text-anchor="middle">state</text>
-<rect x="962" y="454" width="138" height="46" rx="9" fill="#FFFFFF" stroke="#F09A87" stroke-width="1" stroke-dasharray="3.5 3"/>
-<text x="1031" y="474" font-size="14" fill="#29697B" font-weight="bold" text-anchor="middle">persistent record</text>
-<text x="1031" y="491" font-size="13.5" fill="#5D6B70" font-weight="normal" text-anchor="middle">or latent memory</text>
-<text x="826" y="528" font-size="14" fill="#5D6B70" font-weight="normal" text-anchor="middle" font-style="italic">a residency change moves bytes without changing the logical memory state</text>
-<rect x="1182" y="168" width="294" height="380" rx="14" fill="#EAF5F7" stroke="#8FBDC7" stroke-width="1.3" stroke-dasharray="6 4"/>
-<text x="1329" y="200" font-size="24" fill="#29697B" font-weight="bold" text-anchor="middle">Active Model Execution</text>
-<rect x="1196" y="214" width="266" height="32" rx="9" fill="#FFFFFF" stroke="#8FBDC7" stroke-width="1" stroke-dasharray="4 3"/>
-<use href="#ic-ctx" xlink:href="#ic-ctx" x="1206" y="220" width="20" height="20"/>
-<text x="1234" y="236" font-size="16" fill="#29697B" font-weight="bold" text-anchor="start">Context</text>
-<rect x="1196" y="252" width="266" height="32" rx="9" fill="#FFFFFF" stroke="#8FBDC7" stroke-width="1" stroke-dasharray="4 3"/>
-<use href="#ic-feat" xlink:href="#ic-feat" x="1206" y="258" width="20" height="20"/>
-<text x="1234" y="274" font-size="16" fill="#29697B" font-weight="bold" text-anchor="start">Multimodal Features</text>
-<rect x="1196" y="290" width="266" height="32" rx="9" fill="#FFFFFF" stroke="#8FBDC7" stroke-width="1" stroke-dasharray="4 3"/>
-<use href="#ic-tokens" xlink:href="#ic-tokens" x="1206" y="296" width="20" height="20"/>
-<text x="1234" y="312" font-size="16" fill="#29697B" font-weight="bold" text-anchor="start">Latent Tokens</text>
-<rect x="1196" y="328" width="266" height="32" rx="9" fill="#FFFFFF" stroke="#8FBDC7" stroke-width="1" stroke-dasharray="4 3"/>
-<use href="#ic-kv" xlink:href="#ic-kv" x="1206" y="334" width="20" height="20"/>
-<text x="1234" y="350" font-size="16" fill="#29697B" font-weight="bold" text-anchor="start">KV / Recurrent State</text>
-<path d="M1329 360 L1329 374" fill="none" stroke="#29697B" stroke-width="1.7" stroke-linecap="round" marker-end="url(#arrT)"/>
-<rect x="1298" y="376" width="62" height="62" rx="15" fill="#FFFFFF" stroke="#29697B" stroke-width="1.7"/>
-<use href="#ic-agent" xlink:href="#ic-agent" x="1308" y="386" width="42" height="42"/>
-<rect x="1196" y="446" width="76" height="30" rx="15.0" fill="#F8A599"/>
-<text x="1234.0" y="466.76" font-size="16" fill="#FFFFFF" font-weight="bold" text-anchor="middle">Reason</text>
-<path d="M1274 461 L1289 461" fill="none" stroke="#29697B" stroke-width="1.6" stroke-linecap="round" marker-end="url(#arrT)"/>
-<rect x="1291" y="446" width="76" height="30" rx="15.0" fill="#F8A599"/>
-<text x="1329.0" y="466.76" font-size="16" fill="#FFFFFF" font-weight="bold" text-anchor="middle">Plan</text>
-<path d="M1369 461 L1384 461" fill="none" stroke="#29697B" stroke-width="1.6" stroke-linecap="round" marker-end="url(#arrT)"/>
-<rect x="1386" y="446" width="76" height="30" rx="15.0" fill="#F8A599"/>
-<text x="1424.0" y="466.76" font-size="16" fill="#FFFFFF" font-weight="bold" text-anchor="middle">Act</text>
-<rect x="1196" y="484" width="266" height="58" rx="10" fill="#FFFFFF" stroke="#F09A87" stroke-width="1.1" stroke-dasharray="4 3"/>
-<text x="1329" y="502" font-size="13.5" fill="#5D6B70" font-weight="normal" text-anchor="middle">Request-local state is an execution</text>
-<text x="1329" y="518" font-size="13.5" fill="#5D6B70" font-weight="normal" text-anchor="middle">artifact; only state retained and</text>
-<text x="1329" y="534" font-size="13.5" fill="#5D6B70" font-weight="normal" text-anchor="middle">reused later becomes agent memory.</text>
-<rect x="1484" y="168" width="28" height="380" rx="9" fill="#CBE2E6" stroke="#8FBDC7" stroke-width="1.2"/>
-<text x="1498" y="358" font-size="17" fill="#29697B" font-weight="bold" text-anchor="middle" transform="rotate(-90 1498 358)">Downstream Computation</text>
+<path d="M1158 422 L1104 422" fill="none" stroke="#29697B" stroke-width="1.8" stroke-linecap="round" marker-end="url(#arrT)"/>
+<text x="512" y="456" font-size="12.5" fill="#5D6B70" font-weight="normal" text-anchor="start" font-style="italic">what gets committed, and into what</text>
+<rect x="512" y="462" width="126" height="42" rx="9" fill="#FFFFFF" stroke="#F09A87" stroke-width="1" stroke-dasharray="3.5 3"/>
+<text x="575" y="479" font-size="14" fill="#29697B" font-weight="bold" text-anchor="middle">expired</text>
+<text x="575" y="496" font-size="13.5" fill="#5D6B70" font-weight="normal" text-anchor="middle">context</text>
+<rect x="644" y="462" width="126" height="42" rx="9" fill="#FFFFFF" stroke="#F09A87" stroke-width="1" stroke-dasharray="3.5 3"/>
+<text x="707" y="479" font-size="14" fill="#29697B" font-weight="bold" text-anchor="middle">completed</text>
+<text x="707" y="496" font-size="13.5" fill="#5D6B70" font-weight="normal" text-anchor="middle">trajectory</text>
+<rect x="776" y="462" width="126" height="42" rx="9" fill="#FFFFFF" stroke="#F09A87" stroke-width="1" stroke-dasharray="3.5 3"/>
+<text x="839" y="479" font-size="14" fill="#29697B" font-weight="bold" text-anchor="middle">reasoning-</text>
+<text x="839" y="496" font-size="13.5" fill="#5D6B70" font-weight="normal" text-anchor="middle">derived state</text>
+<path d="M906 483 L924 483" fill="none" stroke="#29697B" stroke-width="1.6" stroke-linecap="round" marker-end="url(#arrT)"/>
+<rect x="926" y="462" width="174" height="42" rx="9" fill="#CBE2E6" stroke="#8FBDC7" stroke-width="1.2"/>
+<text x="1013" y="479" font-size="14" fill="#29697B" font-weight="bold" text-anchor="middle">persistent record</text>
+<text x="1013" y="496" font-size="13.5" fill="#29697B" font-weight="normal" text-anchor="middle">or latent memory</text>
+<text x="816" y="528" font-size="14" fill="#5D6B70" font-weight="normal" text-anchor="middle" font-style="italic">a residency change moves bytes without changing the logical memory state</text>
+<rect x="1162" y="168" width="350" height="380" rx="14" fill="#EAF5F7" stroke="#8FBDC7" stroke-width="1.3" stroke-dasharray="6 4"/>
+<text x="1337" y="200" font-size="24" fill="#29697B" font-weight="bold" text-anchor="middle">Downstream Computation</text>
+<text x="1337" y="219" font-size="12.5" fill="#5D6B70" font-weight="normal" text-anchor="middle" font-style="italic">materialized execution state consumed by the current request</text>
+<rect x="1176" y="228" width="322" height="32" rx="9" fill="#FFFFFF" stroke="#8FBDC7" stroke-width="1" stroke-dasharray="4 3"/>
+<use href="#ic-ctx" xlink:href="#ic-ctx" x="1186" y="234" width="20" height="20"/>
+<text x="1214" y="250" font-size="15" fill="#29697B" font-weight="bold" text-anchor="start">Context</text>
+<text x="1488" y="249" font-size="12" fill="#5D6B70" font-weight="normal" text-anchor="end">text · image tokens</text>
+<rect x="1176" y="266" width="322" height="32" rx="9" fill="#FFFFFF" stroke="#8FBDC7" stroke-width="1" stroke-dasharray="4 3"/>
+<use href="#ic-feat" xlink:href="#ic-feat" x="1186" y="272" width="20" height="20"/>
+<text x="1214" y="288" font-size="15" fill="#29697B" font-weight="bold" text-anchor="start">Multimodal Features</text>
+<text x="1488" y="287" font-size="12" fill="#5D6B70" font-weight="normal" text-anchor="end">bound to interface</text>
+<rect x="1176" y="304" width="322" height="32" rx="9" fill="#FFFFFF" stroke="#8FBDC7" stroke-width="1" stroke-dasharray="4 3"/>
+<use href="#ic-tokens" xlink:href="#ic-tokens" x="1186" y="310" width="20" height="20"/>
+<text x="1214" y="326" font-size="15" fill="#29697B" font-weight="bold" text-anchor="start">Latent Tokens</text>
+<text x="1488" y="325" font-size="12" fill="#5D6B70" font-weight="normal" text-anchor="end">compressed memory</text>
+<rect x="1176" y="342" width="322" height="32" rx="9" fill="#FFFFFF" stroke="#8FBDC7" stroke-width="1" stroke-dasharray="4 3"/>
+<use href="#ic-kv" xlink:href="#ic-kv" x="1186" y="348" width="20" height="20"/>
+<text x="1214" y="364" font-size="15" fill="#29697B" font-weight="bold" text-anchor="start">KV / Recurrent State</text>
+<text x="1488" y="363" font-size="12" fill="#5D6B70" font-weight="normal" text-anchor="end">stored or rebuilt</text>
+<path d="M1337 374 L1337 388" fill="none" stroke="#29697B" stroke-width="1.7" stroke-linecap="round" marker-end="url(#arrT)"/>
+<rect x="1306" y="390" width="62" height="62" rx="15" fill="#FFFFFF" stroke="#29697B" stroke-width="1.7"/>
+<use href="#ic-agent" xlink:href="#ic-agent" x="1316" y="400" width="42" height="42"/>
+<rect x="1384" y="409" width="114" height="24" rx="12" fill="#E3DAF2" stroke="#BFAEE0" stroke-width="1.1" stroke-dasharray="4 3"/>
+<text x="1441" y="425" font-size="12" fill="#29697B" font-weight="normal" text-anchor="middle">+ adapter weights</text>
+<path d="M1382 421 L1372 421" fill="none" stroke="#29697B" stroke-width="1.4" stroke-linecap="round" marker-end="url(#arrT)"/>
+<rect x="1176" y="460" width="94" height="30" rx="15.0" fill="#F8A599"/>
+<text x="1223.0" y="480.76" font-size="16" fill="#FFFFFF" font-weight="bold" text-anchor="middle">Reason</text>
+<path d="M1272 475 L1288 475" fill="none" stroke="#29697B" stroke-width="1.6" stroke-linecap="round" marker-end="url(#arrT)"/>
+<rect x="1290" y="460" width="94" height="30" rx="15.0" fill="#F8A599"/>
+<text x="1337.0" y="480.76" font-size="16" fill="#FFFFFF" font-weight="bold" text-anchor="middle">Plan</text>
+<path d="M1386 475 L1402 475" fill="none" stroke="#29697B" stroke-width="1.6" stroke-linecap="round" marker-end="url(#arrT)"/>
+<rect x="1404" y="460" width="94" height="30" rx="15.0" fill="#F8A599"/>
+<text x="1451.0" y="480.76" font-size="16" fill="#FFFFFF" font-weight="bold" text-anchor="middle">Act</text>
+<rect x="1176" y="498" width="322" height="48" rx="10" fill="#FFFFFF" stroke="#F09A87" stroke-width="1.1" stroke-dasharray="4 3"/>
+<text x="1337" y="514" font-size="12.5" fill="#5D6B70" font-weight="normal" text-anchor="middle">Request-local state is an execution artifact;</text>
+<text x="1337" y="528" font-size="12.5" fill="#5D6B70" font-weight="normal" text-anchor="middle">only state deliberately retained and reused</text>
+<text x="1337" y="542" font-size="12.5" fill="#5D6B70" font-weight="normal" text-anchor="middle">across later steps becomes agent memory.</text>
 <path d="M200 552 L200 592" fill="none" stroke="#72ADAB" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="5 3" marker-end="url(#arrM)" marker-start="url(#arrM)"/>
 <text x="210" y="578" font-size="14" fill="#72ADAB" font-weight="normal" text-anchor="start" font-style="italic">records &amp; replicas</text>
-<path d="M826 552 L826 592" fill="none" stroke="#72ADAB" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="5 3" marker-end="url(#arrM)" marker-start="url(#arrM)"/>
-<text x="836" y="578" font-size="14" fill="#72ADAB" font-weight="normal" text-anchor="start" font-style="italic">byte movement</text>
-<path d="M1329 552 L1329 592" fill="none" stroke="#72ADAB" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="5 3" marker-end="url(#arrM)" marker-start="url(#arrM)"/>
-<text x="1339" y="578" font-size="14" fill="#72ADAB" font-weight="normal" text-anchor="start" font-style="italic">resident state</text>
+<path d="M816 552 L816 592" fill="none" stroke="#72ADAB" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="5 3" marker-end="url(#arrM)" marker-start="url(#arrM)"/>
+<text x="826" y="578" font-size="14" fill="#72ADAB" font-weight="normal" text-anchor="start" font-style="italic">byte movement</text>
+<path d="M1337 552 L1337 592" fill="none" stroke="#72ADAB" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="5 3" marker-end="url(#arrM)" marker-start="url(#arrM)"/>
+<text x="1347" y="578" font-size="14" fill="#72ADAB" font-weight="normal" text-anchor="start" font-style="italic">resident state</text>
 <rect x="24" y="596" width="1488" height="172" rx="14" fill="#F7FBFC" stroke="#8FBDC7" stroke-width="1.3" stroke-dasharray="6 4"/>
 <text x="40" y="628" font-size="24" fill="#29697B" font-weight="bold" text-anchor="start">Physical Memory Hierarchy</text>
-<text x="392" y="628" font-size="14" fill="#5D6B70" font-weight="normal" text-anchor="start" font-style="italic">physical placement is orthogonal to logical representation — the same logical memory may be replicated across tiers</text>
+<text x="392" y="628" font-size="14" fill="#5D6B70" font-weight="normal" text-anchor="start" font-style="italic">placement is orthogonal to logical type; multimodal state is larger and more varied: encoder outputs, video / audio KV, diffusion state</text>
 <rect x="40" y="634" width="265" height="92" rx="12" fill="#CBE2E6" stroke="#29697B" stroke-width="1.4"/>
 <use href="#ic-gpu" xlink:href="#ic-gpu" x="52" y="660" width="34" height="34"/>
 <text x="94" y="668" font-size="17" fill="#29697B" font-weight="bold" text-anchor="start">Accelerator</text>
 <text x="94" y="686" font-size="17" fill="#29697B" font-weight="bold" text-anchor="start">HBM</text>
-<text x="94" y="707" font-size="14" fill="#3E5057" font-weight="normal" text-anchor="start">active KV · working set</text>
+<text x="94" y="707" font-size="14" fill="#3E5057" font-weight="normal" text-anchor="start">active KV · encoder outputs</text>
 <rect x="437" y="634" width="265" height="92" rx="12" fill="#CBE2E6" stroke="#29697B" stroke-width="1.4"/>
 <use href="#ic-ram" xlink:href="#ic-ram" x="449" y="660" width="34" height="34"/>
 <text x="491" y="668" font-size="17" fill="#29697B" font-weight="bold" text-anchor="start">Host</text>
 <text x="491" y="686" font-size="17" fill="#29697B" font-weight="bold" text-anchor="start">DRAM</text>
-<text x="491" y="707" font-size="14" fill="#3E5057" font-weight="normal" text-anchor="start">staged context · pools</text>
+<text x="491" y="707" font-size="14" fill="#3E5057" font-weight="normal" text-anchor="start">staged context · KV pool</text>
 <rect x="834" y="634" width="265" height="92" rx="12" fill="#CBE2E6" stroke="#29697B" stroke-width="1.4"/>
 <use href="#ic-ssd" xlink:href="#ic-ssd" x="846" y="660" width="34" height="34"/>
 <text x="888" y="668" font-size="17" fill="#29697B" font-weight="bold" text-anchor="start">Local</text>
@@ -342,7 +357,7 @@
 <use href="#ic-cloud" xlink:href="#ic-cloud" x="1243" y="660" width="34" height="34"/>
 <text x="1285" y="668" font-size="17" fill="#29697B" font-weight="bold" text-anchor="start">Remote / Disaggregated</text>
 <text x="1285" y="686" font-size="17" fill="#29697B" font-weight="bold" text-anchor="start">Storage</text>
-<text x="1285" y="707" font-size="14" fill="#3E5057" font-weight="normal" text-anchor="start">shared pool · cold archive</text>
+<text x="1285" y="707" font-size="14" fill="#3E5057" font-weight="normal" text-anchor="start">shared pool · media archive</text>
 <path d="M425 664 L317 664" fill="none" stroke="#29697B" stroke-width="1.6" stroke-linecap="round" marker-end="url(#arrT)"/>
 <text x="371" y="654" font-size="14" fill="#29697B" font-weight="bold" text-anchor="middle">Prefetch · Promote</text>
 <path d="M317 700 L425 700" fill="none" stroke="#29697B" stroke-width="1.6" stroke-linecap="round" marker-end="url(#arrT)"/>
@@ -366,29 +381,37 @@
 <text x="596.0" y="755" font-size="15" fill="#29697B" font-weight="normal" text-anchor="middle">Recompute</text>
 <text x="1496" y="755" font-size="14" fill="#5D6B70" font-weight="normal" text-anchor="end" font-style="italic">cost = bytes moved × effective bandwidth, overlapped with computation or traded against recompute</text>
 <rect x="1532" y="56" width="124" height="712" rx="14" fill="#F8D6BE" stroke="#E0A47A" stroke-width="1.3" stroke-dasharray="6 4"/>
-<text x="1594.0" y="86" font-size="15" fill="#29697B" font-weight="bold" text-anchor="middle">Consistency &amp;</text>
-<text x="1594.0" y="104" font-size="15" fill="#29697B" font-weight="bold" text-anchor="middle">Coordination</text>
-<use href="#ic-identity" xlink:href="#ic-identity" x="1579.0" y="126" width="30" height="30"/>
-<text x="1594.0" y="174" font-size="15" fill="#29697B" font-weight="bold" text-anchor="middle">Identity</text>
-<text x="1594.0" y="190" font-size="13.5" fill="#7A5B43" font-weight="normal" text-anchor="middle">stable unit id</text>
-<use href="#ic-version" xlink:href="#ic-version" x="1579.0" y="216" width="30" height="30"/>
-<text x="1594.0" y="264" font-size="15" fill="#29697B" font-weight="bold" text-anchor="middle">Version</text>
-<text x="1594.0" y="280" font-size="13.5" fill="#7A5B43" font-weight="normal" text-anchor="middle">what changed</text>
-<use href="#ic-prov" xlink:href="#ic-prov" x="1579.0" y="306" width="30" height="30"/>
-<text x="1594.0" y="354" font-size="15" fill="#29697B" font-weight="bold" text-anchor="middle">Provenance</text>
-<text x="1594.0" y="370" font-size="13.5" fill="#7A5B43" font-weight="normal" text-anchor="middle">back to source</text>
-<use href="#ic-dep" xlink:href="#ic-dep" x="1579.0" y="396" width="30" height="30"/>
-<text x="1594.0" y="444" font-size="15" fill="#29697B" font-weight="bold" text-anchor="middle">Dependency</text>
-<text x="1594.0" y="460" font-size="13.5" fill="#7A5B43" font-weight="normal" text-anchor="middle">what derives</text>
-<use href="#ic-inval" xlink:href="#ic-inval" x="1579.0" y="486" width="30" height="30"/>
-<text x="1594.0" y="534" font-size="15" fill="#29697B" font-weight="bold" text-anchor="middle">Invalidation</text>
-<text x="1594.0" y="550" font-size="13.5" fill="#7A5B43" font-weight="normal" text-anchor="middle">what is stale</text>
-<use href="#ic-del" xlink:href="#ic-del" x="1579.0" y="576" width="30" height="30"/>
-<text x="1594.0" y="624" font-size="15" fill="#29697B" font-weight="bold" text-anchor="middle">Deletion</text>
-<text x="1594.0" y="640" font-size="13.5" fill="#7A5B43" font-weight="normal" text-anchor="middle">what retires</text>
-<use href="#ic-share" xlink:href="#ic-share" x="1579.0" y="666" width="30" height="30"/>
-<text x="1594.0" y="714" font-size="15" fill="#29697B" font-weight="bold" text-anchor="middle">Sharing &amp;</text>
-<text x="1594.0" y="731" font-size="15" fill="#29697B" font-weight="bold" text-anchor="middle">Isolation</text>
+<text x="1594.0" y="84" font-size="15" fill="#29697B" font-weight="bold" text-anchor="middle">Consistency &amp;</text>
+<text x="1594.0" y="102" font-size="15" fill="#29697B" font-weight="bold" text-anchor="middle">Coordination</text>
+<text x="1594.0" y="124" font-size="11.5" fill="#9A6A48" font-weight="normal" text-anchor="middle" font-style="italic">metadata kept</text>
+<text x="1594.0" y="137" font-size="11.5" fill="#9A6A48" font-weight="normal" text-anchor="middle" font-style="italic">across layers</text>
+<use href="#ic-identity" xlink:href="#ic-identity" x="1581.0" y="146" width="26" height="26"/>
+<text x="1594.0" y="186" font-size="14" fill="#29697B" font-weight="bold" text-anchor="middle">Identity</text>
+<text x="1594.0" y="199" font-size="12.5" fill="#7A5B43" font-weight="normal" text-anchor="middle">stable unit id</text>
+<use href="#ic-version" xlink:href="#ic-version" x="1581.0" y="212" width="26" height="26"/>
+<text x="1594.0" y="252" font-size="14" fill="#29697B" font-weight="bold" text-anchor="middle">Version</text>
+<text x="1594.0" y="265" font-size="12.5" fill="#7A5B43" font-weight="normal" text-anchor="middle">what changed</text>
+<use href="#ic-prov" xlink:href="#ic-prov" x="1581.0" y="278" width="26" height="26"/>
+<text x="1594.0" y="318" font-size="14" fill="#29697B" font-weight="bold" text-anchor="middle">Provenance</text>
+<text x="1594.0" y="331" font-size="12.5" fill="#7A5B43" font-weight="normal" text-anchor="middle">back to source</text>
+<use href="#ic-lifetime" xlink:href="#ic-lifetime" x="1581.0" y="344" width="26" height="26"/>
+<text x="1594.0" y="384" font-size="14" fill="#29697B" font-weight="bold" text-anchor="middle">Lifetime</text>
+<text x="1594.0" y="397" font-size="12.5" fill="#7A5B43" font-weight="normal" text-anchor="middle">how long valid</text>
+<use href="#ic-dep" xlink:href="#ic-dep" x="1581.0" y="410" width="26" height="26"/>
+<text x="1594.0" y="450" font-size="14" fill="#29697B" font-weight="bold" text-anchor="middle">Dependency</text>
+<text x="1594.0" y="463" font-size="12.5" fill="#7A5B43" font-weight="normal" text-anchor="middle">what derives</text>
+<path d="M1594.0 480 L1594.0 496" fill="none" stroke="#C98B5E" stroke-width="1.6" stroke-linecap="round" marker-end="url(#arrP)"/>
+<text x="1594.0" y="514" font-size="11.5" fill="#9A6A48" font-weight="normal" text-anchor="middle" font-style="italic">decisions it</text>
+<text x="1594.0" y="527" font-size="11.5" fill="#9A6A48" font-weight="normal" text-anchor="middle" font-style="italic">enables</text>
+<use href="#ic-inval" xlink:href="#ic-inval" x="1581.0" y="536" width="26" height="26"/>
+<text x="1594.0" y="576" font-size="14" fill="#29697B" font-weight="bold" text-anchor="middle">Invalidation</text>
+<text x="1594.0" y="589" font-size="12.5" fill="#7A5B43" font-weight="normal" text-anchor="middle">after update</text>
+<use href="#ic-del" xlink:href="#ic-del" x="1581.0" y="608" width="26" height="26"/>
+<text x="1594.0" y="648" font-size="14" fill="#29697B" font-weight="bold" text-anchor="middle">Deletion</text>
+<text x="1594.0" y="661" font-size="12.5" fill="#7A5B43" font-weight="normal" text-anchor="middle">retire derived</text>
+<use href="#ic-share" xlink:href="#ic-share" x="1581.0" y="680" width="26" height="26"/>
+<text x="1594.0" y="720" font-size="14" fill="#29697B" font-weight="bold" text-anchor="middle">Sharing &amp;</text>
+<text x="1594.0" y="734" font-size="14" fill="#29697B" font-weight="bold" text-anchor="middle">Isolation</text>
 <path d="M1529 100 L1514 100" fill="none" stroke="#E0A47A" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 3" marker-end="url(#arrM)"/>
 <path d="M1529 260 L1514 260" fill="none" stroke="#E0A47A" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 3" marker-end="url(#arrM)"/>
 <path d="M1529 430 L1514 430" fill="none" stroke="#E0A47A" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 3" marker-end="url(#arrM)"/>
